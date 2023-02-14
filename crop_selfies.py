@@ -33,8 +33,8 @@ def crop_selfies():
             im.thumbnail(SIZE, Image.Resampling.LANCZOS) # Downscale
             im.save(cropped_image_path)
             log.debug("image processed")
-        except IOError:
-            log.error("cannot create thumbnail for '%s'" % infile)
+        except IOError as err:
+            log.error("cannot create thumbnail for '%s' : %s" % (image_name, err))
     log.info("Selfies cropped")
 
 crop_selfies()
