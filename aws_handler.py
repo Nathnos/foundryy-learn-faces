@@ -2,8 +2,8 @@
 (file) : Handle AWS (Amazon Web Services)
 """
 import regex
-TRAIN_TEMPLATE = 'train_template.bat'
-TRAIN_FILE = 'train.bat'
+TRAIN_TEMPLATE = 'train_template.sh'
+TRAIN_FILE = 'train.sh'
 
 """
 Retrieve a request from the SQS queue storing requests of face learning

@@ -4,4 +4,4 @@ __pycache__
 train.bat
 upload_to_aws.bat
 test_ec2.pem
-start.bat
+start.sh
