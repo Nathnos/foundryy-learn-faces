@@ -1,7 +1,9 @@
+pip install -r requirements.txt
+
 python preprocess.py
 
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"
-export DATA_DIR="path-to-dir-containing-images"
+export DATA_DIR="cropped_selfies"
 
 accelerate launch textual_inversion.py \
   --pretrained_model_name_or_path=$MODEL_NAME \
