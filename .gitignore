@@ -3,5 +3,5 @@ cropped_selfies
 __pycache__
 train.bat
 upload_to_aws.bat
-test_ec2.pem
+*.pem
 start.sh

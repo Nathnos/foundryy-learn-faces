@@ -546,8 +546,9 @@ def main():
     initializer_token_id = token_ids[0]
     placeholder_token_id = tokenizer.convert_tokens_to_ids(args.placeholder_token)
 
+    # VECTORS
     # Resize the token embeddings as we are adding new special tokens to the tokenizer
-    text_encoder.resize_token_embeddings(len(tokenizer))
+    text_encoder.resize_token_embeddings(4) # originally : len(tokenizer)
 
     # Initialise the newly added placeholder token with the embeddings of the initializer token
     token_embeds = text_encoder.get_input_embeddings().weight.data

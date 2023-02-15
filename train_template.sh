@@ -7,10 +7,12 @@ accelerate launch textual_inversion.py \
   --learnable_property="object" \
   --placeholder_token="<@>" --initializer_token="@" \
   --resolution=512 \
-  --train_batch_size=5 \
+  --train_batch_size=2 \
   --gradient_accumulation_steps=1 \
-  --max_train_steps=2000 \
-  --learning_rate=0.01 --scale_lr \
+  --max_train_steps=2500 \
+  --learning_rate=0.008 --scale_lr \
   --lr_scheduler="linear" \
-  --lr_warmup_steps=10 \
+  --lr_warmup_steps=0 \
+  --num_train_epochs=1 \
+  --checkpointing_steps=500 \
   --output_dir="embeddings"
